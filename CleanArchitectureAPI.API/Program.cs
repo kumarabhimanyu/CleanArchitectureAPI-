@@ -20,7 +20,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Inject Service Dependency
+//Inject Service Dependency Modified
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<ICustomService<StudentServiceModel>, StudentService>();
 builder.Services.AddScoped<ICustomService<Teacher>, TeacherService>();
