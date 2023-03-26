@@ -1,6 +1,5 @@
-﻿using CleanArchitectureAPI.Domain.Data;
-using CleanArchitectureAPI.Domain.Models;
-using CleanArchitectureAPI.Service.ICustomServices;
+﻿using CleanArchitectureAPI.Service.ICustomServices;
+using CleanArchitectureAPI.Service.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CleanArchitectureAPI.API.Controllers
@@ -9,13 +8,18 @@ namespace CleanArchitectureAPI.API.Controllers
     [ApiController]
     public class StudentsController : ControllerBase
     {
-        private readonly ICustomService<Student> _customService;
-        public StudentsController(ICustomService<Student> customService)
+        private readonly ICustomService<StudentServiceModel> _customService;
+        public StudentsController(ICustomService<StudentServiceModel> customService)
         {
             _customService = customService;
         }
 
         [HttpGet(nameof(GetStudentById))]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public IActionResult GetStudentById(int Id)
         {
             var obj = _customService.Get(Id);
@@ -29,6 +33,11 @@ namespace CleanArchitectureAPI.API.Controllers
             }
         }
         [HttpGet(nameof(GetAllStudent))]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public IActionResult GetAllStudent()
         {
             var obj = _customService.GetAll();
@@ -42,8 +51,14 @@ namespace CleanArchitectureAPI.API.Controllers
             }
         }
 
+
         [HttpPost(nameof(CreateStudent))]
-        public IActionResult CreateStudent(Student student)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public IActionResult CreateStudent(StudentServiceModel student)
         {
             if (student != null)
             {
@@ -56,11 +71,27 @@ namespace CleanArchitectureAPI.API.Controllers
             }
         }
 
-        [HttpPost(nameof(UpdateStudent))]
-        public IActionResult UpdateStudent(Student student)
+        [HttpPut(nameof(UpdateStudent))]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public IActionResult UpdateStudent(int Id, StudentServiceModel student)
         {
             if (student != null)
             {
+                if (Id != student.Id || student.Id == 0)
+                {
+                    return BadRequest();
+                }
+
+                var obj = _customService.Get(student.Id);
+                if (obj == null)
+                {
+                    return NotFound();
+                }
+
                 _customService.Update(student);
                 return Ok("Updated SuccessFully");
             }
@@ -68,20 +99,55 @@ namespace CleanArchitectureAPI.API.Controllers
             {
                 return BadRequest();
             }
-
         }
 
         [HttpDelete(nameof(DeleteStudent))]
-        public IActionResult DeleteStudent(Student student)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public IActionResult DeleteStudent(int Id)
         {
-            if (student != null)
+            if (Id > 0)
             {
-                _customService.Delete(student);
+                var obj = _customService.Get(Id);
+                if (obj == null)
+                {
+                    return NotFound();
+                }
+
+                _customService.Delete(Id);
                 return Ok("Deleted Successfully");
             }
             else
             {
-                return BadRequest("Something went wrong");
+                return BadRequest("Invalid Input");
+            }
+        }
+
+        [HttpDelete(nameof(RemoveStudent))]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        public IActionResult RemoveStudent(int Id)
+        {
+            if (Id > 0)
+            {
+                var obj = _customService.Get(Id);
+                if (obj == null)
+                {
+                    return NotFound();
+                }
+
+                _customService.Remove(Id);
+                return Ok("Removed Successfully");
+            }
+            else
+            {
+                return BadRequest("Invalid Input");
             }
         }
     }

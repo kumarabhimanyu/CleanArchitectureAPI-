@@ -6,8 +6,7 @@
         T Get(int Id);
         void Insert(T entity);
         void Update(T entity);
-        void Delete(T entity);
-        void Remove(T entity);
-  
+        void Delete(int Id);
+        void Remove(int Id);
     }
 }

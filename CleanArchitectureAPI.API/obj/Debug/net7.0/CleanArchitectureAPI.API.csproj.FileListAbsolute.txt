@@ -77,3 +77,5 @@ C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.
 C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\obj\Debug\net7.0\CleanArchitectureAPI.API.pdb
 C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\obj\Debug\net7.0\CleanArchitectureAPI.API.genruntimeconfig.cache
 C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\obj\Debug\net7.0\ref\CleanArchitectureAPI.API.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\NLog.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\NLog.Extensions.Logging.dll

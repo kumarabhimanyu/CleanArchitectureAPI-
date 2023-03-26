@@ -14,26 +14,16 @@ namespace CleanArchitectureAPI.Repository.Repository
         {
             _cleanArchitectureAPIDBContext = applicationDbContext;
             entities = _cleanArchitectureAPIDBContext.Set<T>();
-        }
-
-        public void Delete(T entity)
-        {
-            if (entity == null)
-            {
-                throw new ArgumentNullException("entity");
-            }
-            entities.Remove(entity);
-            _cleanArchitectureAPIDBContext.SaveChanges();
-        }
+        }        
 
         public T Get(int Id)
         {
-            return entities.SingleOrDefault(c => c.Id == Id);
+            return entities.SingleOrDefault(c => c.Id == Id && c.IsActive == true);
         }
 
         public IEnumerable<T> GetAll()
         {
-            return entities.AsEnumerable();
+            return entities.AsEnumerable().Where(x=>x.IsActive == true);
         }
 
         public void Insert(T entity)
@@ -42,23 +32,14 @@ namespace CleanArchitectureAPI.Repository.Repository
             {
                 throw new ArgumentNullException("entity");
             }
+
+            var currentTime = DateTime.UtcNow;
+            entity.CreatedDate = entity.ModifiedDate= currentTime;
+            entity.IsActive = true;
+
             entities.Add(entity);
             _cleanArchitectureAPIDBContext.SaveChanges();
-        }
-
-        public void Remove(T entity)
-        {
-            if (entity == null)
-            {
-                throw new ArgumentNullException("entity");
-            }
-            entities.Remove(entity);
-        }
-
-        public void SaveChanges()
-        {
-            _cleanArchitectureAPIDBContext.SaveChanges();
-        }
+        }                  
 
         public void Update(T entity)
         {
@@ -66,9 +47,40 @@ namespace CleanArchitectureAPI.Repository.Repository
             {
                 throw new ArgumentNullException("entity");
             }
+
+            entity.ModifiedDate = DateTime.UtcNow;
             entities.Update(entity);
             _cleanArchitectureAPIDBContext.SaveChanges();
         }
 
+        public void Delete(int Id)
+        {
+            var entity = entities.SingleOrDefault(c => c.Id == Id);
+
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+            entities.Remove(entity);
+            _cleanArchitectureAPIDBContext.SaveChanges();
+        }
+
+        public void Remove(int Id)
+        {
+            var entity = entities.SingleOrDefault(c => c.Id == Id);
+
+            if (entity == null)
+            {
+                throw new ArgumentNullException("entity");
+            }
+
+            entity.IsActive = false;
+            entities.Update(entity);
+            _cleanArchitectureAPIDBContext.SaveChanges();
+        }
+        public void SaveChanges()
+        {
+            _cleanArchitectureAPIDBContext.SaveChanges();
+        }
     }
 }

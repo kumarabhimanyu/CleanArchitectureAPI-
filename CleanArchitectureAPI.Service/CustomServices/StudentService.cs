@@ -15,15 +15,6 @@ namespace ServiceLayer.CustomServices
             _studentRepository = studentRepository;
             _mapper = mapper;
         }
-        public void Delete(StudentServiceModel entity)
-        {
-            if (entity != null)
-            {
-                _studentRepository.Delete(_mapper.Map<Student>(entity));
-                _studentRepository.SaveChanges();
-            }
-        }
-
 
         public StudentServiceModel Get(int Id)
         {
@@ -59,15 +50,6 @@ namespace ServiceLayer.CustomServices
                 _studentRepository.SaveChanges();
             }
         }
-
-        public void Remove(StudentServiceModel entity)
-        {
-            if (entity != null)
-            {
-                _studentRepository.Remove(_mapper.Map<Student>(entity));
-                _studentRepository.SaveChanges();
-            }
-        }
         public void Update(StudentServiceModel entity)
         {
             if (entity != null)
@@ -75,6 +57,17 @@ namespace ServiceLayer.CustomServices
                 _studentRepository.Update(_mapper.Map<Student>(entity));
                 _studentRepository.SaveChanges();
             }
+        }
+
+        public void Delete(int Id)
+        {
+            _studentRepository.Delete(Id);
+            _studentRepository.SaveChanges();
+        }
+        public void Remove(int Id)
+        {
+            _studentRepository.Remove(Id);
+            _studentRepository.SaveChanges();
         }
     }
 }

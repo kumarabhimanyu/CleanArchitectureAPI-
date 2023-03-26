@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c00JJJLcidBDOugVpqNnyX/0xpB3wk3xC1pjSlMNuvForibogvfOkqw0eBsMlB5bP82UsS6ZTu5+MpasxuUUzw==",
+  "dgSpecHash": "kOXwMordfh2fsgWzEXos3BO+V5sWs4JAt/cy52LM9XrcrjYfDkgofsDJxn9YbptPAmDJ8mVmRMtf4vCaLMyjKg==",
   "success": true,
   "projectFilePath": "C:\\Users\\abhimanyu.kumar\\source\\repos\\CleanArchitectureAPI\\CleanArchitectureAPI.API\\CleanArchitectureAPI.API.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,8 @@
     "C:\\Users\\abhimanyu.kumar\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\abhimanyu.kumar\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\abhimanyu.kumar\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\abhimanyu.kumar\\.nuget\\packages\\nlog\\5.1.2\\nlog.5.1.2.nupkg.sha512",
+    "C:\\Users\\abhimanyu.kumar\\.nuget\\packages\\nlog.extensions.logging\\5.2.2\\nlog.extensions.logging.5.2.2.nupkg.sha512",
     "C:\\Users\\abhimanyu.kumar\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\abhimanyu.kumar\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\abhimanyu.kumar\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

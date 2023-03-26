@@ -5,6 +5,8 @@ namespace CleanArchitectureAPI.Domain.Data
 {
     public class CleanArchitectureAPIDBContext : DbContext
     {
+        //ToDo: Migration generation needs to be improved
+
         public CleanArchitectureAPIDBContext(DbContextOptions<CleanArchitectureAPIDBContext> options) : base(options)
         {
 

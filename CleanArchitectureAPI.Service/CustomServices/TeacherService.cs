@@ -1,124 +1,73 @@
-﻿using CleanArchitectureAPI.Domain.Models;
+﻿using AutoMapper;
+using CleanArchitectureAPI.Domain.Models;
 using CleanArchitectureAPI.Repository.IRepository;
 using CleanArchitectureAPI.Service.ICustomServices;
+using CleanArchitectureAPI.Service.Models;
 
 namespace ServiceLayer.CustomServices
 {
-    public class TeacherService : ICustomService<Teacher>
+    public class TeacherService : ICustomService<TeacherServiceModel>
     {
-        private readonly IRepository<Teacher> _TeacherRepository;
-        public TeacherService(IRepository<Teacher> TeacherRepository)
+        private readonly IRepository<Teacher> _teacherRepository;
+        private readonly IMapper _mapper;
+        public TeacherService(IRepository<Teacher> TeacherRepository, IMapper mapper)
         {
-            _TeacherRepository = TeacherRepository;
+            _teacherRepository = TeacherRepository;
+            _mapper = mapper;
         }
-        public void Delete(Teacher entity)
+        public TeacherServiceModel Get(int Id)
         {
-            try
+            var obj = _teacherRepository.Get(Id);
+            if (obj != null)
             {
-                if(entity!=null)
-                {
-                    _TeacherRepository.Delete(entity);
-                    _TeacherRepository.SaveChanges();
-                }
+                return _mapper.Map<TeacherServiceModel>(obj);
             }
-            catch (Exception)
+            else
             {
-
-                throw;
+                return null;
             }
         }
 
-        public  Teacher Get(int Id)
+        public IEnumerable<TeacherServiceModel> GetAll()
         {
-            try
+            var obj = _teacherRepository.GetAll();
+            if (obj != null)
             {
-                var obj = _TeacherRepository.Get(Id);
-                if(obj!=null)
-                {
-                    return obj;
-                }
-                else
-                {
-                    return null;
-                }
-
+                return _mapper.Map<List<TeacherServiceModel>>(obj);
             }
-            catch (Exception)
+            else
             {
-
-                throw;
+                return null;
             }
         }
 
-        public IEnumerable<Teacher> GetAll()
+        public void Insert(TeacherServiceModel entity)
         {
-            try
+            if (entity != null)
             {
-                var obj = _TeacherRepository.GetAll();
-                if (obj != null)
-                {
-                    return obj;
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
+                _teacherRepository.Insert(_mapper.Map<Teacher>(entity));
+                _teacherRepository.SaveChanges();
             }
         }
 
-        public void Insert(Teacher entity)
+        public void Update(TeacherServiceModel entity)
         {
-            try
+            if (entity != null)
             {
-                if (entity != null)
-                {
-                    _TeacherRepository.Insert(entity);
-                    _TeacherRepository.SaveChanges();
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
+                _teacherRepository.Update(_mapper.Map<Teacher>(entity));
+                _teacherRepository.SaveChanges();
             }
         }
 
-        public void Remove(Teacher entity)
+        public void Delete(int Id)
         {
-            try
-            {
-                if(entity!=null)
-                {
-                  _TeacherRepository.Remove(entity);
-                  _TeacherRepository.SaveChanges();
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            _teacherRepository.Delete(Id);
+            _teacherRepository.SaveChanges();
         }
-        public void Update(Teacher entity)
+        public void Remove(int Id)
         {
-            try
-            {
-                if(entity!=null)
-                {
-                    _TeacherRepository.Update(entity);
-                    _TeacherRepository.SaveChanges();
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            _teacherRepository.Remove(Id);
+            _teacherRepository.SaveChanges();
         }
     }
 }

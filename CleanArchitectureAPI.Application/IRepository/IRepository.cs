@@ -7,9 +7,15 @@ namespace CleanArchitectureAPI.Repository.IRepository
         IEnumerable<T> GetAll();
         T Get(int Id);
         void Insert(T entity);
+        
+        //ToDo - How to update specific columns during update
         void Update(T entity);
-        void Delete(T entity);
-        void Remove(T entity);
+
+        //Hard Delete
+        void Delete(int Id);
+        
+        //Soft Delete
+        void Remove(int Id);
         void SaveChanges();
     }
 }
