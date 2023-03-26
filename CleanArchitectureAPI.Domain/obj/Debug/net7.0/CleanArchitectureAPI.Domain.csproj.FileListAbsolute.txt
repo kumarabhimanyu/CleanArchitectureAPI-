@@ -1,0 +1,14 @@
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\bin\Debug\net7.0\CleanArchitectureAPI.Domain.deps.json
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\bin\Debug\net7.0\CleanArchitectureAPI.Domain.runtimeconfig.json
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\bin\Debug\net7.0\CleanArchitectureAPI.Domain.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\bin\Debug\net7.0\CleanArchitectureAPI.Domain.pdb
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\CleanArchitectureAPI.Domain.csproj.AssemblyReference.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\CleanArchitectureAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\CleanArchitectureAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\CleanArchitectureAPI.Domain.AssemblyInfo.cs
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\CleanArchitectureAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\CleanArchitectureAPI.Domain.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\refint\CleanArchitectureAPI.Domain.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\CleanArchitectureAPI.Domain.pdb
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\CleanArchitectureAPI.Domain.genruntimeconfig.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Domain\obj\Debug\net7.0\ref\CleanArchitectureAPI.Domain.dll

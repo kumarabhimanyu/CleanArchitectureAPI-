@@ -1,0 +1,15 @@
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Application.deps.json
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Application.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Application.pdb
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Domain.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Domain.pdb
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Application.csproj.AssemblyReference.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Application.AssemblyInfoInputs.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Application.AssemblyInfo.cs
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Application.csproj.CoreCompileInputs.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Application.csproj.CopyComplete
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Application.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\refint\CleanArchitectureAPI.Application.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Application.pdb
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\ref\CleanArchitectureAPI.Application.dll

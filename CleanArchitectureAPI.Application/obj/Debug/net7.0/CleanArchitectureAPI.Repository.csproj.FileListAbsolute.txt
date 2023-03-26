@@ -1,0 +1,15 @@
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Repository.deps.json
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Repository.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Repository.pdb
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Domain.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\bin\Debug\net7.0\CleanArchitectureAPI.Domain.pdb
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Repository.csproj.AssemblyReference.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Repository.AssemblyInfoInputs.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Repository.AssemblyInfo.cs
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Repository.csproj.CoreCompileInputs.cache
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Repository.csproj.CopyComplete
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Repository.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\refint\CleanArchitectureAPI.Repository.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\CleanArchitectureAPI.Repository.pdb
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.Application\obj\Debug\net7.0\ref\CleanArchitectureAPI.Repository.dll
