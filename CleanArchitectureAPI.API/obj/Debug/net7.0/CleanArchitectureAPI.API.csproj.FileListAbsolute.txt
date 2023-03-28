@@ -79,3 +79,13 @@ C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.
 C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\obj\Debug\net7.0\ref\CleanArchitectureAPI.API.dll
 C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\NLog.dll
 C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\NLog.Extensions.Logging.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+C:\Users\abhimanyu.kumar\source\repos\CleanArchitectureAPI\CleanArchitectureAPI.API\bin\Debug\net7.0\Serilog.Sinks.File.dll

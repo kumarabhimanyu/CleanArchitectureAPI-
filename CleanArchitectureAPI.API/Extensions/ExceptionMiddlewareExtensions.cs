@@ -1,12 +1,14 @@
-﻿using CleanArchitectureAPI.API.Models;
+﻿using CleanArchitectureAPI.API.CustomExceptionMiddleware;
+using CleanArchitectureAPI.API.Models;
 using Microsoft.AspNetCore.Diagnostics;
 using System.Net;
+using ILogger = Serilog.ILogger;
 
 namespace CleanArchitectureAPI.API.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
-        public static void ConfigureExceptionHandler(this IApplicationBuilder app)
+        public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILogger logger)
         {
             app.UseExceptionHandler(appError =>
             {
@@ -18,7 +20,7 @@ namespace CleanArchitectureAPI.API.Extensions
                     var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                     if (contextFeature != null)
                     {
-                        //logger.LogError($"Something went wrong: {contextFeature.Error}");
+                        logger.Error($"Something went wrong by code: {contextFeature.Error}");
 
                         await context.Response.WriteAsync(new ErrorDetails()
                         {
@@ -28,6 +30,11 @@ namespace CleanArchitectureAPI.API.Extensions
                     }
                 });
             });
+        }
+
+        public static void ConfigureCustomExceptionMiddleware(this IApplicationBuilder app)
+        {
+            app.UseMiddleware<ExceptionMiddleware>();
         }
     }
 }

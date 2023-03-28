@@ -48,9 +48,9 @@
               "target": "Package",
               "version": "[7.0.4, )"
             },
-            "NLog.Extensions.Logging": {
+            "Serilog.AspNetCore": {
               "target": "Package",
-              "version": "[5.2.2, )"
+              "version": "[5.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

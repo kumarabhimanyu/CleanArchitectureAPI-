@@ -1,13 +1,13 @@
 using CleanArchitectureAPI.API.Extensions;
 using CleanArchitectureAPI.Domain.Data;
-using CleanArchitectureAPI.Domain.Models;
 using CleanArchitectureAPI.Repository.IRepository;
 using CleanArchitectureAPI.Repository.Repository;
 using CleanArchitectureAPI.Service.ICustomServices;
 using CleanArchitectureAPI.Service.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
+using Serilog;
 using ServiceLayer.CustomServices;
+using ILogger = Serilog.ILogger;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +19,10 @@ builder.Services.AddDbContext<CleanArchitectureAPIDBContext>(options =>
 // Add services to the container. - ToDo, is there a better way to add mapper
 builder.Services.AddAutoMapper(typeof(StudentService));
 builder.Services.AddAutoMapper(typeof(TeacherService));
+
+builder.Host.UseSerilog((context, configuration) 
+    => configuration.ReadFrom.Configuration(context.Configuration));
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -38,8 +42,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-//var logger = app.Services.GetRequiredService<ILoggerManager>();
-app.ConfigureExceptionHandler();
+
+app.UseSerilogRequestLogging();
+var logger = app.Services.GetRequiredService<ILogger>();
+//app.ConfigureExceptionHandler(logger);
+
+app.ConfigureCustomExceptionMiddleware();
 
 app.UseHttpsRedirection();
 

@@ -1,4 +1,5 @@
-﻿using CleanArchitectureAPI.Service.ICustomServices;
+﻿using CleanArchitectureAPI.Domain.Data;
+using CleanArchitectureAPI.Service.ICustomServices;
 using CleanArchitectureAPI.Service.Models;
 using Microsoft.AspNetCore.Mvc;
 
